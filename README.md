@@ -54,12 +54,3 @@ Undo and redo are available from the <kbd>Edit</kbd> menu or by pressing
 
 To move around the viewport, press <kbd>space</kbd> and move your mouse 
 around the screen.
-
-
-Things we're working on
------------------------
-
-* Multiple tools
-* Box Select
-* Zoom
-* More things
