@@ -42,7 +42,7 @@ If you just want to help plan things out that's great.
 For those interested there's a support link here: http://www.fontclod.com/support-us
 
 
-[1]: https://github.com/fontclod/fontclod "fontclod-poc"
+[1]: https://github.com/fontclod/fontclod-poc "fontclod-poc"
 [2]: mailto:fontclod@librelist.com "mailing list"
 [3]: https://github.com/fontclod/fontclod/blob/master/docs/ "documentation"
 [4]: https://github.com/fontclod/fontclod-poc/blob/master/text/changelog.txt "changelog"
