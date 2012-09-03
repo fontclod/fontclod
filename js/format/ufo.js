@@ -1,7 +1,7 @@
 (function(Fontclod) {
 	"use strict";
 
-	Fontclod.Clod._format.ufo = {
+	Fontclod.Clod.format.ufo = {
 		name: 'UFO',
 		extension: 'ufo',
 

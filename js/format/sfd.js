@@ -1,7 +1,7 @@
 (function(Fontclod) {
 	"use strict";
 
-	Fontclod.Clod._format.sfd = {
+	Fontclod.Clod.format.sfd = {
 		name: 'SFD',
 		extension: 'sfd',
 

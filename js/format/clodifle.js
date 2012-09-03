@@ -1,7 +1,7 @@
 (function(Fontclod) {
 	"use strict";
 
-	Fontclod.Clod._format.clodifle = {
+	Fontclod.Clod.format.clodifle = {
 		name: 'Clodifle',
 		extension: 'clod',
 

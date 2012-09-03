@@ -46,18 +46,20 @@
 		};
 	}
 
-	Clod.prototype.serialize   = function(format) {
-		if (typeof this._format[format] == 'undefined')
+	Clod.format = {};
+
+	Clod.prototype.serialize = function(format) {
+		if (typeof Clod.format[format] == 'undefined')
 			format = 'clodifle';
 
-		return this._format[format].serialize(this.data);
+		return Clod.format[format].serialize(this.data);
 	};
 
 	Clod.prototype.unserialize = function(format) {
-		if (typeof this._format[format] == 'undefined')
+		if (typeof Clod.format[format] == 'undefined')
 			format = 'clodifle';
 
-		return this._format[format].unserialize(this.data);
+		return Clod.format[format].unserialize(this.data);
 	};
 
 	Clod.prototype.findGlyph = function(search) {
