@@ -80,5 +80,5 @@ Fontclod = (function() {
 	};
 
 
-	return new Fontclod();
+	return Fontclod;
 })();
