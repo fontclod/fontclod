@@ -6,7 +6,8 @@ Fontclod = (function() {
 	    release = 'alpha';
 
 	function Fontclod() {
-		var glyph, clod;
+		var glyph, clod,
+		    that = this;
 
 		this.options = {};
 		this.options.editable = true;
@@ -14,17 +15,13 @@ Fontclod = (function() {
 			regex: /^[a-z_]+(?:\.[a-z0-9]+)?$/
 		};
 
-		this.__defineGetter__('build',   function() { return build; });
-		this.__defineGetter__('version', function() { return version; });
-		this.__defineGetter__('release', function() { return release; });
-
 		this.__defineGetter__('glyph', function() { return glyph; });
 		this.__defineSetter__('glyph', function(val) {
 			if (/^[a-z_]+(?:\.[a-z0-9]+)?$/i.test(val))
 				glyph = val;
 
-			if (!Fontclod.clod.glyph.find(glyph))
-				Fontclod.clod.glyph.create({ name: glyph });
+			if (!that.clod.glyph.find(glyph))
+				that.clod.glyph.create({ name: glyph });
 		});
 
 		this._stack = new Undo();
@@ -33,6 +30,9 @@ Fontclod = (function() {
 		this._events = {};
 	}
 
+	Fontclod.__defineGetter__('build',   function() { return build; });
+	Fontclod.__defineGetter__('version', function() { return version; });
+	Fontclod.__defineGetter__('release', function() { return release; });
 
 	// Fontclod.load('file.ext'[, 'type'])
 	Fontclod.prototype.load = function() {};
