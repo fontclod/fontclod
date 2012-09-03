@@ -5,6 +5,8 @@
 		var named   = {},
 		    unicode = {};
 
+		c = c || {};
+
 		this.data = {
 			format: 'clodifle',
 			version: Fontclod.version,
