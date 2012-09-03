@@ -75,8 +75,8 @@ Fontclod.add('point type', {
         name: '',
 
         handles: {
-                left: true,
-                right: true
+                left: true, // true, false, -1; -1 mirrors the opposing handle
+                right: -1
         },
 
         // ctx: canvas context, data: point data, points: points on this curve
