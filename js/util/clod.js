@@ -55,11 +55,20 @@
 		return Clod.format[format].serialize(this.data);
 	};
 
-	Clod.prototype.unserialize = function(format) {
+	Clod.prototype.unserialize = function(data, format) {
 		if (typeof Clod.format[format] == 'undefined')
 			format = 'clodifle';
 
-		return Clod.format[format].unserialize(this.data);
+		var data   = Clod.format[format].unserialize(data),
+		    glyphs = data.font.glyphs;
+
+		this.glyph = {
+			named: {},
+			unicode: {}
+		};
+
+		this.data.font = data.font;
+		this.data.font.glyphs = this.glyph.named;
 	};
 
 	Clod.prototype.findGlyph = function(search) {
