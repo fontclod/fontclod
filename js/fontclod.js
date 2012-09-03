@@ -24,8 +24,10 @@ Fontclod = (function() {
 				that.clod.glyph.create({ name: glyph });
 		});
 
-		this._stack = new Undo();
-		this._selection = new Selection();
+		this.clod = new Fontclod.Clod();
+
+		this._stack = new Fondclod.Undo();
+		this._selection = new Fondclod.Selection();
 
 		this._events = {};
 	}
