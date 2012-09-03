@@ -1,15 +1,13 @@
 (function(Fontclod) {
 	"use strict";
 
-	var version = 0.2;
-
 	function Clod(c) {
 		var named   = {},
 		    unicode = {};
 
 		this.data = {
 			format: 'clodifle',
-			version: version,
+			version: Fontclod.version,
 
 			generator: {
 				name:    'Fontclod',
