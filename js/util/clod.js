@@ -2,10 +2,12 @@
 	"use strict";
 
 	function Clod(c) {
-		var named   = {},
-		    unicode = {};
-
 		c = c || {};
+
+		this.glyph = {
+			named: {},
+			unicode: {}
+		};
 
 		this.data = {
 			format: 'clodifle',
@@ -36,13 +38,8 @@
 				xHeight: c.xHeight || 0,
 				angle:   c.angle   || 0,
 
-				glyphs: named
+				glyphs: this.glyph.named
 			}
-		};
-
-		this.glyph = {
-			named: named,
-			unicode: unicode
 		};
 	}
 
