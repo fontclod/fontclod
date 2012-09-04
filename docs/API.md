@@ -1,42 +1,60 @@
 Events
 ======
+```js
 Fontclod.on('event[ event]', cb)
+```
+```js
 Fontclod.emit('event', arguments)
-copy
-paste
-change
-zoom
-load
-save
-beforesave
-unload
-beforeunload
-draw
-beforedraw
-glyphadd
-glyphremove
-pointadd
-pointremove
-pointclick
-pointmove
-pointselect
+```
 
-guideadd
-guideremove
-guideclick
-guidemove
-guideselect
+Fontclod
+--------
+* copy
+* paste
+* change
+* zoom
+* load
+* unload
+* beforeunload
+* save
+* beforesave
+* draw
+* beforedraw
 
-handledelete
-handleclick
-handlemove
-handleselect
+Glyphs
+------
+* glyphadd
+* glyphremove
+
+Points
+------
+* pointadd
+* pointremove
+* pointclick
+* pointmove
+* pointselect
+
+Guides
+------
+* guideadd
+* guideremove
+* guideclick
+* guidemove
+* guideselect
+
+Handles
+-------
+* handledelete
+* handleclick
+* handlemove
+* handleselect
 
 
 Widgets
 =======
-
+```js
 Fontclod.add('widget', options)
+```
 
 Options:
 
@@ -50,9 +68,9 @@ Options:
 
 Menus
 =====
-
+```js
 Fontclod.add('menu', options)
-
+```
 
 Options:
 
@@ -62,15 +80,18 @@ Options:
 
 Points
 ======
+```js
 Fontclod.add('point', {
         x: 0,
         y: 0,
         contour: 0
 });
-
+```
+```js
 Fontclod.get('contours', {
 });
-
+```
+```js
 Fontclod.add('point type', {
         name: '',
 
@@ -88,3 +109,4 @@ Fontclod.add('point type', {
         draw: function(ctx, data, points) {
         }
 });
+```
