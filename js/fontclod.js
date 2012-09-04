@@ -26,8 +26,8 @@ Fontclod = (function() {
 
 		this.clod = new Fontclod.Clod();
 
-		this._stack = new Fondclod.Undo();
-		this._selection = new Fondclod.Selection();
+		this._stack = new Fontclod.Undo();
+		this._selection = new Fontclod.Selection();
 
 		this._events = {};
 	}
