@@ -2,15 +2,21 @@
 	"use strict";
 
 	function Undo(options) {
-		this.index = options.index || 0;
-		this.stack = options.stack || [];
-		this._data = options.data  || {};
+		options = options || {};
+		this.stack  = options.stack || [];
+		this._index = options.index || 0;
+		this._data  = options.data  || {};
 	}
 
 	// Undo.step(1) Undo.step(-10)
-	Undo.prototype.step = function(n) {};
+	Undo.prototype.step = function(n) {
+		this._index = Math.max(0, Math.min(this._index + n, this.data.length));
+	};
+
 	// Undo.seek(index)
-	Undo.prototype.seek = function(i) {};
+	Undo.prototype.seek = function(i) {
+		this._index = i;
+	};
 
 	Undo.prototype.push = function(data) {
 		var diff = this.diff(data);
