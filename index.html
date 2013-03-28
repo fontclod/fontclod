@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Fontclod: Online font editor</title>
+		<style type="text/css">
+		/*
+			Colors
+			======
+
+			Cream: #f3f5eb
+			Dark brown: #4d3c30
+			Brown: #ba8b6e
+			Red: #eb6351
+			Blue: #abe1cc
+			Blue (text): #97c6b4
+		*/
+		@import url(http://fonts.googleapis.com/css?family=Cantarell|Alegreya:700italic,400italic,400);
+
+		* {
+			margin: 0;
+			padding: 0;
+			font: inherit;
+		}
+		body {
+			background: #f3f5eb;
+			font: 20px/1.3 Alegreya, Times, "Times New Roman", serif;
+			color: #4d3c30;
+		}
+		div {
+			width: 700px;
+			margin: 1em auto;
+		}
+		a:link, a:visited {
+			color: #eb6351;
+			text-decoration: none;
+			border-bottom: 1px dashed #4d3c30;
+			font-style: italic;
+		}
+		a:hover, a:active {
+			color: #000;
+			background: #abe1cc;
+			border: 0;
+		}
+		a.alpha {
+			background-color: #abe1cc;
+			background-image: linear-gradient(bottom, rgb(163,214,194) 7%, rgb(171,225,204) 78%);
+			background-image: -o-linear-gradient(bottom, rgb(163,214,194) 7%, rgb(171,225,204) 78%);
+			background-image: -moz-linear-gradient(bottom, rgb(163,214,194) 7%, rgb(171,225,204) 78%);
+			background-image: -webkit-linear-gradient(bottom, rgb(163,214,194) 7%, rgb(171,225,204) 78%);
+			background-image: -ms-linear-gradient(bottom, rgb(163,214,194) 7%, rgb(171,225,204) 78%);
+			background-image: -webkit-gradient(
+				linear,
+				left bottom,
+				left top,#ba8b6e
+				color-stop(0.07, rgb(163,214,194)),
+				color-stop(0.78, rgb(171,225,204))
+			);
+			border-radius: 3px;
+			border: 1px solid #abe1cc;
+			border-bottom: 2px solid #97b0a4;
+			border-top: 0;
+			text-align: center;
+			font-weight: 700;
+			color: #fff;
+			text-shadow: #97c0b4 0 -1px 0;
+			display: block;
+			width: 688px;
+			padding: 6px;
+			margin: -3px auto 1em;
+		}
+		a.alpha:hover {
+			border-bottom-color: #eb6351;
+			text-shadow: #cbffec 0 0 15px;
+			color: #e67351;
+		}
+		h1 {
+			text-indent: -1000em;
+			background: url(assets/images/mark.png) 50% 40% no-repeat;
+			height: 220px;
+			border-bottom: 3px solid #abe1cc;
+			background-color: #f7fbe8;
+		}
+		h2 {
+			border: 1px solid #be8b6e;
+			border-bottom-width: 2px;
+			padding: 0 12px 0.2em;
+			font-size: 1.2em;
+			font-family: Cantarell, sans-serif;
+			display: inline-block;
+			margin: 0.7em 0 .6em;
+			color: #aa7b5e;
+			border-radius: 4px;
+		}
+		h3 {
+			margin: 1.8em 0 .6em;
+			font-size: 90%;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: #75bda1;
+		}
+		img {
+			float:left;
+		}
+		img.a {
+			float: right;
+		}	
+		kbd {
+			color: #eb6351;
+			border: 1px solid #eb6351;
+			border-bottom-width: 2px;
+			border-radius: 2px;
+			padding: 1px 3px 2px;
+			font-size: 80%;
+			font-family: Cantarell, sans-serif;
+			line-height: 1em;
+			display: inline-block;
+		}
+		samp {
+			color: #eb6351;
+		}
+		p {
+			margin: 0 0 0.75em;
+		}
+		hr {
+			border: 0;
+			border-top: 4px solid #ba8b6e;
+		}
+		li {
+			list-style: none;
+			background: url(assets/images/check.png) 0 3px no-repeat;
+			padding: 0 0 0 30px;
+			font-style: italic;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>
+			Fontclod
+		</h1>
+		<a class="alpha" href="edit.html">Try it out&mdash;public alpha 7</a>
+		<div>
+			<p>Fontclod is a (soon to be open source) font editor for the web. It&#146;s in public alpha, so try it out! If you have any suggestions or comments, please contact <a href="https://profiles.google.com/artistenator/">+Brian Zick</a></p>
+			<h2>Usage</h2>
+			<p>Since Fontclod is in alpha, a lot of what&#146;s here may be changing soon. But here&#146;s a rundown of current basic usage:</p>
+			<h3>Load &amp; Save</h3>
+			<img src="assets/images/filemenu.png" />
+			<p>To save a file, on the menu click on <kbd>File &gt; Save</kbd>. You will then be presented with a textbox full of code. Copy this code into a plain text editor like <a href="http://en.wikipedia.org/wiki/TextEdit">TextEdit</a>, <a href="https://en.wikipedia.org/wiki/Notepad_(software)">Notepad</a>, or <a href="https://en.wikipedia.org/wiki/Gedit">Gedit</a>. Save this with any name you desire, optionally appending &#147;.clod&#148; to the end.</p>
+			<p>Loading is much the reverse. Click <kbd>File &gt; Load</kbd>, and paste the code into the box that appears.</p>
+			<h3>Add or Remove Glyphs</h3>
+			<img class="a" src="assets/images/glyphchooser.png" />
+			<p>Adding <a href="http://en.wikipedia.org/wiki/Glyph">glyphs</a>, is done pressing the <kbd>+</kbd> at the bottom of the glyph list on the right, and choosing a name for the glyph. To remove a glyph, select the glyph, and press the <kbd>-</kbd> button at the bottom of the glyph list.</p>
+			<p>You can change a glyph&#146;s name by double clicking its name in the list.</p>
+			<h3>Selecting and Moving Points</h3>
+			<img src="assets/images/points.png" />
+			<p>Click on a point to select it. Holding <kbd>shift</kbd> allows you to select more points. You can select handles or points. Click and drag part of your selection to move it. You can nudge your selection with your arrow keys, and holding down <kbd>shift</kbd> will nudge ten units instead of one. Right now there is no box selection implemented.</p>
+			<h3>Placing and Removing Points</h3>
+			<img class="a" src="assets/images/addpoints.png" />
+			<p>To place points, at present, hold <kbd>Ctrl</kbd> and click on the canvas. To close a contour, select one of its end points, hold <kbd>Ctrl</kbd> and click on the other end point. Add a handle by pulling on the red or blue circle surrounding a point. Remove points or handles by selecting them and pressing <kbd>backspace</kbd>.</p>
+			<h3>Undo, Redo</h3>
+			<img src="assets/images/undo.png" />
+			<p>Undo and redo are available from the <kbd>Edit</kbd> menu or by pressing <samp><kbd>ctrl</kbd> + <kbd>z</kbd></samp>, or <samp><kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>z</kbd></samp>, respectively.</p>
+			<h3>Scrolling</h3>
+			<img class="a" src="assets/images/move.png" />
+			<p>To move around the viewport, press <kbd>space</kbd> and move your mouse around the screen.</p>
+			<h2>Things we&#146;re working on</h2>
+			<ul>
+			<li>Multiple tools</li>
+			<li>Box Select</li>
+			<li>Copy &amp; Paste</li>
+			<li>Zoom</li>
+			</ul>
+		</div>
+		<hr />
+		<div>
+			<a class="alpha" href="edit.html">Try out Fontclod alpha</a>
+			<p>For developers: Fontclod source will be released during beta.</p>
+			<p>&copy; 2012</p>
+		</div>
+	</body>
+</html>

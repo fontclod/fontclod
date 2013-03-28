@@ -1,0 +1,46 @@
+Information on the Clodifle format:
+
+The version number shows which version of Fontclod generated this clodifle.
+
+The contours array contains a list of contour objects.
+
+The contour object contains information pertaining to whether or not the contour is an open contour, and each of the points in the contour.  Points are in the form of [leftHandX, leftHandY, rightHandX, rightHandY, pointX, pointY]
+
+{
+	"Fontclod": "clodifle",
+	"release":  "alpha",
+	"version":  0,
+
+	"contours": [
+		{
+			"open": false,
+			"points": [
+
+				[112,168,112,168,112,168],
+				[255,168,276,168,255,168],
+				[296,182,296,207,296,207],
+				[296,260,296,289,296,260],
+				[296,302,248,302,248,302],
+				[112,302,112,302,112,302]
+			]
+		},
+		{
+			"open": false,
+			"points": [
+				[47,0,47,0,47,0],
+				[47,339,95,346,47,339],
+				[140,349,314,349,207,349],
+				[358,320,358,183,358,246],
+				[333,163,298,153,298,153],
+				[298,144,339,136,298,144],
+				[363,101,363,32,363,52],
+				[363,14,360,0,360,0],
+				[296,0,296,0,296,0],
+				[296,69,296,101,296,69],
+				[280,120,254,120,254,120],
+				[109,120,109,120,109,120],
+				[109,0,109,0,109,0]
+			]
+		}
+	]
+}
