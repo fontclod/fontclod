@@ -1,3 +1,0 @@
-Discussion
-----------
-fontclod@librelist.com
