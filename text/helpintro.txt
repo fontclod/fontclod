@@ -1,0 +1,8 @@
+Hey!
+Thanks for your interest in Fontclod. It's currently an alpha, so be forewarned.
+
+To place a point, simply hold ctrl and click anywhere inside the viewport. Click and pull at the edge of the new point to get your handles (on the second outline). To select points, just click on them, hold shift to select more than one. Delete a point by selecting it and pressing backspace. This also breaks the contour. You can save your date by copying the clod of text in the box on the upper righthand corner and save it in a text file. To load just paste your data back in the box. :-)
+
+To make comments or requests, head over to the Typophile thread for now.
+
+If you would like this project to continue development, please donate! We need funds to pay for development. At present, higher donations = higher priority on feature requests. Fontclod: for all your font deveoping needs in the clod! ...The only thing missing is u.

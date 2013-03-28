@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta http-equiv="x-ua-compatible" content="chrome=1">
+		<meta name="viewport" content="width=1024">
+		<link rel="shortcut icon" href="favicon.ico">
+		<title>Fontclod &gt; Edit</title>
+<script>document.getElementsByTagName('html')[0].className = 'javascript'; URIprefix = '';</script>
+<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/default.css">
+		<script src="assets/jquery-1.7.2.min.js"></script>
+		<script src="assets/default.js"></script>
+	</head>
+	<body class="_edit">
+		<div id="wrapper">
+			<div id="middle">
+				<div id="content">
+					
+					<canvas id="drawing"></canvas>
+					<canvas id="preview" hidden></canvas>
+					
+					<menu type="toolbar" id="toolbox" hidden>
+						<button id="tool-zoom" title="Zoom" hidden></button>
+						<button id="tool-select" title="Select" hidden></button>
+						<button id="tool-edit" title="Edit"></button>
+						<button id="tool-delete" title="Delete"></button>
+					</menu>
+					
+					<menu type="toolbar" id="menubar" class="widget">
+						<li>
+							<span id="version">
+								Fontclod <a href="text/changelog.txt" target="_blank">&alpha;</a>
+							</span>
+						</li>
+						<li>
+							<label>File</label>
+							<menu label="File">
+								<button class="new">New</button>
+								<hr>
+								<button class="save">Save</button>
+								<button class="load">Load</button>
+							</menu>
+						</li>
+						<li>
+							<label>Edit</label>
+							<menu label="Edit">
+								<button class="undo">Undo</button>
+								<button class="redo">Redo</button>
+								<hr hidden>
+								<button hidden></button>
+							</menu>
+						</li>
+						<li hidden>
+							<menu label="Node">
+								<label>Node</label>
+								<button></button>
+								<button></button>
+							</menu>
+						</li>
+					</menu>
+					
+					<dl id="point-data" hidden>
+						<dt>Type</dt>  <dd id="point-data-type">None Selected</dd>
+						<!--<dt>Angle</dt> <dd id="point-data-angle">-</dd>-->
+						<dt>X</dt>     <dd id="point-data-x">-</dd>
+						<dt>Y</dt>     <dd id="point-data-y">-</dd>
+					</dl>
+					
+					<span id="cursor-data">0, 0</span>
+					
+					
+					<span id="links">
+						<a href="index.html" target="_blank">Introduction</a>&nbsp;
+						<a href="http://typophile.com/node/88181" target="_blank">Discussion</a>
+					</span>
+					
+					<iframe id="support-us" src="support-us.html"></iframe>
+					
+					<div id="glyphs" class="widget">
+						<ul>
+							<li>a</li>
+							<li>b</li>
+							<li>c</li>
+							<li>d</li>
+							<li>e</li>
+							<li class="focus">dirt</li>
+						</ul>
+					
+						<div class="controls">
+							<button class="add-glyph"></button>
+							<button class="delete-glyph"></button>
+						</div>
+					</div>
+					
+					<div class="dialog save" hidden>
+						<textarea id="saved-data" readonly></textarea>
+					
+						<p>To save your clodifle, just copy the JSON data from the box above, and save it in your favorite editor</p>
+					
+						<button class="close-dialog">Close</button>
+					</div>
+					
+					<div class="dialog load" hidden>
+						<textarea id="load-data"></textarea>
+					
+						<p>To load your clodifle, just paste the JSON data into the box above</p>
+					
+						<button class="load">Load</button>
+						<button class="close-dialog">Close</button>
+					</div>
+					
+				</div> <!-- #content -->
+			</div> <!-- #middle -->
+		</div> <!-- #wrapper -->
+	</body>
+</html>
