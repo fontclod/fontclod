@@ -201,9 +201,18 @@ canvas {
 	border-left-width: 1px;
 	background: #f9f9ff;
 }
+	#glyphs .title {
+		background: #4A515F;
+		color: #F1F1F1;
+		border-bottom: 1px solid #1E1E22;
+		line-height: 29px;
+		margin-left: -1px;
+		padding: 0 8px;
+		font-weight: bold;
+	}
 	#glyphs ul {
 		position: absolute;
-		top: 0;
+		top: 30px;
 		bottom: 26px;
 		width: 100%;
 		list-style: none;
