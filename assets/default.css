@@ -99,9 +99,9 @@ menu[type=toolbar] {
 	height: 20px;
 	line-height: 20px;
 	position: absolute;
-	top: 5px;
-	left: 5px;
-	right: 210px;
+	top: 0;
+	left: 0;
+	right: 200px;
 	border-width: 1px;
 	overflow: visible;
 	opacity: .7;
@@ -186,10 +186,10 @@ canvas {
 
 #preview, #toolbox, #point-data, #cursor-data, #support-us, #links, #glyphs {
 	position: absolute;
-	top: 5px;
-	left: 5px;
-	right: 5px;
-	bottom: 5px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	opacity: .7;
 }
 
