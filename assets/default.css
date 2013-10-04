@@ -79,6 +79,7 @@ menu {
 	padding: 0 5px;
 	overflow: hidden;
 	background: #f9f9ff;
+	top: 24px;
 }
 	menu:hover {
 		overflow: visible;
@@ -87,17 +88,18 @@ menu {
 menu[type=toolbar] > li {
 	list-style: none;
 	float: left;
-	margin-right: 5px;
+	margin-right: 9px;
 	height: auto;
 }
 	menu[type=toolbar] > li:first-child {
-		margin-left: 5px;
+		margin-left: 15px;
+		margin-right: 11px;
 	}
 
 menu[type=toolbar] {
 	padding: 0;
-	height: 20px;
-	line-height: 20px;
+	height: 30px;
+	line-height: 30px;
 	position: absolute;
 	top: 0;
 	left: 0;
