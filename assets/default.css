@@ -102,7 +102,7 @@ menu[type=toolbar] {
 	top: 0;
 	left: 0;
 	right: 200px;
-	border-width: 1px;
+	border-bottom-width: 1px;
 	overflow: visible;
 	opacity: .7;
 }
@@ -196,7 +196,7 @@ canvas {
 #glyphs {
 	left: auto;
 	width: 200px;
-	border-width: 1px;
+	border-left-width: 1px;
 	background: #f9f9ff;
 }
 	#glyphs ul {
@@ -204,7 +204,6 @@ canvas {
 		top: 0;
 		bottom: 26px;
 		width: 100%;
-		border-bottom-width: 1px;
 		list-style: none;
 		overflow: auto;
 	}
