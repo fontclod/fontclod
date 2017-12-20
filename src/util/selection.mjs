@@ -1,10 +1,6 @@
-(function(Fontclod) {
-	"use strict";
-
-	function Selection() {
+export default class Selection {
+	constructor() {
 		this.latest = undefined;
 		this.points = [];
-	};
-
-	Fontclod.Selection = Selection;
-})(Fontclod);
+	}
+}

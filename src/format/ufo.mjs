@@ -1,14 +1,11 @@
-(function(Fontclod) {
-	"use strict";
+export default class ufo {
+	static name = 'UFO';
+	static extension = 'ufo';
 
-	Fontclod.Clod.format.ufo = {
-		name: 'UFO',
-		extension: 'ufo',
+	static serialze(data) {
+	}
 
-		serialize: function(data) {
-		},
-
-		unserialize: function(data) {
-		}
-	};
-})(Fontclod);
+	static unserialize(data) {
+		return {};
+	}
+}

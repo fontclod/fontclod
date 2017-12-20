@@ -1,8 +1,8 @@
-(function(Fontclod) {
-	"use strict";
+import { Undo } from '../util';
 
-	function Glyph(data) {
-		this._history = new Fontclod.Undo();
+export default class Glyph {
+	constructor(data) {
+		this._history = new Undo();
 
 		this.unicode = data.unicode || -1;
 		this.name = data.name || '';
@@ -11,9 +11,7 @@
 		this.open = !!data.open;
 	}
 
-	Glyph.prototype.history = function() {};
-	Glyph.prototype.addContour = function() {};
-	Glyph.prototype.removeContour = function(contour) {};
-
-	Fontclod.Glyph = Glyph;
-})(Fontclod);
+	history() {}
+	addContour() {}
+	removeContour(contour) {}
+}

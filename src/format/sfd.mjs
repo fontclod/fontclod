@@ -1,15 +1,11 @@
-(function(Fontclod) {
-	"use strict";
+export default class sfd {
+	static name = 'SFD';
+	static extension = 'sfd';
 
-	Fontclod.Clod.format.sfd = {
-		name: 'SFD',
-		extension: 'sfd',
+	static serialze(data) {
+	}
 
-		serialize: function(data) {
-		},
-
-		unserialize: function(data) {
-			return {};
-		}
-	};
-})(Fontclod);
+	static unserialize(data) {
+		return {};
+	}
+}

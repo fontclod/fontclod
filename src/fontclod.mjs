@@ -1,86 +1,65 @@
-Fontclod = (function() {
-	"use strict";
+'use strict';
 
-	var version = 0.14,
-	    build   = 79,
-	    release = 'alpha';
+import Clod from 'util/clod.mjs';
+import Undo from 'util/undo.mjs';
+import Selection from 'util/selection.mjs';
+import EventEmitter from 'events';
 
-	function Fontclod() {
-		var glyph, clod,
-		    that = this;
 
+/**
+ * @constructor
+ */
+export default class Fontclod extends EventEmitter {
+	const version = '0.14.0';
+	const release = 'alpha';
+
+	constructor(options = {}) {
 		this.options = {};
 		this.options.editable = true;
 		this.options.glyph = {
 			regex: /^[a-z_]+(?:\.[a-z0-9]+)?$/
 		};
 
+		this._stack = new Undo();
+		this._selection = new Selection();
+
 		this.__defineGetter__('glyph', function() { return glyph; });
-		this.__defineSetter__('glyph', function(val) {
+		this.__defineSetter__('glyph', (val) => {
 			if (/^[a-z_]+(?:\.[a-z0-9]+)?$/i.test(val))
 				glyph = val;
 
 			if (!that.clod.glyph.find(glyph))
-				that.clod.glyph.create({ name: glyph });
+				this.clod.glyph.create({ name: glyph });
 		});
-
-		this.clod = new Fontclod.Clod();
-
-		this._stack = new Fontclod.Undo();
-		this._selection = new Fontclod.Selection();
-
-		this._events = {};
 	}
 
-	Fontclod.__defineGetter__('build',   function() { return build; });
-	Fontclod.__defineGetter__('version', function() { return version; });
-	Fontclod.__defineGetter__('release', function() { return release; });
+	/**
+	 * Load a font file
+	 *
+	 * @example
+	 * Fontclod.load('file.ext'[, 'type'])
+	 *
+	 * @param {string} filename  Path to file to load
+	 * @param {string} [filetype='clod']  Filetype
+	 */
+	load(filename, filetype='clod') {}
 
-	// Fontclod.load('file.ext'[, 'type'])
-	Fontclod.prototype.load = function() {};
-
-	// Fontclod.save('file.ext'[, 'type'])
-	Fontclod.prototype.save = function() {};
-
-
-	// Fontclod.on('event[ event]', cb);
-	Fontclod.prototype.on = function(events, cb) {
-		events = events.split(/\s+/g);
-
-		if (events.length <= 1) {
-			if (Object.hasOwnProperty.call(this._events, events[0]))
-				this._events[events[0]].push(cb);
-		} else {
-			for (var i=0; i<events.length; i++)
-				this.on(events[i], cb);
-		}
-
-		return this;
-	};
-
-	// Fontclod.emit('event', args);
-	Fontclod.prototype.emit = function(event, args) {
-		if (Object.hasOwnProperty.call(this._events, event))
-			this._events.apply(this, args);
-	};
+	/**
+	 * Save a font file
+	 *
+	 * @example
+	 * Fontclod.save('file.ext'[, 'type'])
+	 *
+	 * @param {string} filename  Path to file to save
+	 * @param {string} [filetype='clod']  Filetype
+	 */
+	save(filename, filetype='clod') {}
 
 
 	// Fontclod.add('type'[, options]);
-	Fontclod.prototype.add = function(type, options) {
+	add(type, options) {
 		if (Object.hasOwnProperty.call(this.add.type, type) &&
 		    typeof this.add.type[type] == 'function')
 			return this.add.type[type].call(this, options || {});
 	};
-
-	Fontclod.prototype.add.type = {};
-
-
-	Fontclod.prototype.undo = function() {
-	};
-
-	Fontclod.prototype.redo = function() {
-	};
-
-
-	return Fontclod;
-})();
+}

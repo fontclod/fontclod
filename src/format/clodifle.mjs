@@ -1,16 +1,12 @@
-(function(Fontclod) {
-	"use strict";
+export default class clodifle {
+	static name = 'Clodifle';
+	static extension = 'clod';
 
-	Fontclod.Clod.format.clodifle = {
-		name: 'Clodifle',
-		extension: 'clod',
+	static serialze(data) {
+		return JSON.stringify(data);
+	}
 
-		serialize: function(data) {
-			return JSON.stringify(data);
-		},
-
-		unserialize: function(data) {
-			return JSON.parse(data);
-		}
-	};
-})(Fontclod);
+	static unserialize(data) {
+		return JSON.parse(data);
+	}
+}
