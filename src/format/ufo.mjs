@@ -1,5 +1,4 @@
-export default class ufo {
-	static name = 'UFO';
+export class ufo {
 	static extension = 'ufo';
 
 	static serialze(data) {

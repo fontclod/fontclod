@@ -1,9 +1,10 @@
 import { Clod, Undo, Selection } from './util';
+import { Widget } from './plugin';
 import EventEmitter from 'events';
 
 export default class Fontclod extends EventEmitter {
-	const version = '0.14.0';
-	const release = 'alpha';
+	static version = '0.14.0';
+	static release = 'alpha';
 
 	/**
 	 * @constructor
@@ -13,6 +14,8 @@ export default class Fontclod extends EventEmitter {
 	 * @param {RegEx} [options.glyph.regex]  Glyph name regex
 	 */
 	constructor(options = {}) {
+		super();
+
 		this.options = {};
 		this.options.editable = true;
 		this.options.glyph = {
@@ -33,7 +36,7 @@ export default class Fontclod extends EventEmitter {
 	}
 
 	get glyph() {
-		if (!this.options.glyph.regex.test(val))
+		//if (!this.options.glyph.regex.test(val))
 	}
 
 	/**

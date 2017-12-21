@@ -1,3 +1,3 @@
-export import './clodifle';
-export import './sfd';
-export import './ufo';
+export * from './clodifle';
+export * from './sfd';
+export * from './ufo';

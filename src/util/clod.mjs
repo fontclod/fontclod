@@ -1,6 +1,6 @@
 import format from '../format';
 
-export default class Clod {
+export class Clod {
 	constructor(c = {}) {
 		this.glyph = {
 			named: {},

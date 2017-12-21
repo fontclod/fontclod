@@ -1,5 +1,4 @@
-export default class sfd {
-	static name = 'SFD';
+export class sfd {
 	static extension = 'sfd';
 
 	static serialze(data) {

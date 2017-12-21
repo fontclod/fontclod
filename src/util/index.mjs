@@ -1,7 +1,7 @@
-export import './clod';
-export import './contour';
-export import './glyph';
-export import './proxyable';
-export import './selection';
-export import './undo';
-export import './widget';
+export * from './clod';
+export * from './contour';
+export * from './glyph';
+export * from './plugin';
+export * from './proxyable';
+export * from './selection';
+export * from './undo';

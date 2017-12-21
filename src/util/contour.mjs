@@ -1,4 +1,4 @@
-export default class Contour(parent) {
+export class Contour {
 	constructor(parent) {
 		this.points = [];
 		this.parent = parent;

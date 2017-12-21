@@ -1,4 +1,4 @@
-export default class Undo {
+export class Undo {
 	constructor(options = {}) {
 		this.stack  = options.stack || [];
 		this.index = options.index || 0;

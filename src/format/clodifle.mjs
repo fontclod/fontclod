@@ -1,5 +1,4 @@
-export default class clodifle {
-	static name = 'Clodifle';
+export class clodifle {
 	static extension = 'clod';
 
 	static serialze(data) {

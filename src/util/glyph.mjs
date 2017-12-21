@@ -1,6 +1,6 @@
 import { Undo } from '../util';
 
-export default class Glyph {
+export class Glyph {
 	constructor(data) {
 		this._history = new Undo();
 
