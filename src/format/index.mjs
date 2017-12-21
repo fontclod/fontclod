@@ -1,3 +1,3 @@
-export import 'clodifle.js';
-export import 'sfd.js';
-export import 'ufo.js';
+export import './clodifle';
+export import './sfd';
+export import './ufo';

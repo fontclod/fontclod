@@ -1,18 +1,17 @@
-'use strict';
-
-import Clod from 'util/clod.mjs';
-import Undo from 'util/undo.mjs';
-import Selection from 'util/selection.mjs';
+import { Clod, Undo, Selection } from './util';
 import EventEmitter from 'events';
 
-
-/**
- * @constructor
- */
 export default class Fontclod extends EventEmitter {
 	const version = '0.14.0';
 	const release = 'alpha';
 
+	/**
+	 * @constructor
+	 * @param {Object} [options]  Options object
+	 * @param {Boolean} [options.editable=true]  Whether font editing should be enabled or not
+	 * @param {Object} [options.glyph]
+	 * @param {RegEx} [options.glyph.regex]  Glyph name regex
+	 */
 	constructor(options = {}) {
 		this.options = {};
 		this.options.editable = true;
@@ -28,9 +27,13 @@ export default class Fontclod extends EventEmitter {
 			if (/^[a-z_]+(?:\.[a-z0-9]+)?$/i.test(val))
 				glyph = val;
 
-			if (!that.clod.glyph.find(glyph))
+			if (!this.clod.glyph.find(glyph))
 				this.clod.glyph.create({ name: glyph });
 		});
+	}
+
+	get glyph() {
+		if (!this.options.glyph.regex.test(val))
 	}
 
 	/**

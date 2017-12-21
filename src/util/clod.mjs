@@ -41,7 +41,7 @@ export default class Clod {
 		};
 	}
 
-	serialize(format) {
+	serialize(format='clodifle') {
 		if (typeof format[format] == 'undefined')
 			format = 'clodifle';
 
