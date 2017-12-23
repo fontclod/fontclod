@@ -8,7 +8,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "mocha --require babel-register"
   },
   "repository": {
     "type": "git",
