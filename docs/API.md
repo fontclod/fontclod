@@ -1,7 +1,7 @@
 Events
 ======
 ```js
-Fontclod.on('event[ event]', cb)
+Fontclod.on('event', cb)
 ```
 ```js
 Fontclod.emit('event', arguments)

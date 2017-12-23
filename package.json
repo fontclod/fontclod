@@ -1,0 +1,38 @@
+{
+  "name": "fontclod",
+  "version": "0.1.0",
+  "description": "Font editor for the web.",
+  "main": "dist/fontclod.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha --require babel-register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fontclod/fontclod.git"
+  },
+  "keywords": [
+    "font",
+    "editor",
+    "webfont"
+  ],
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/fontclod/fontclod/issues"
+  },
+  "homepage": "https://github.com/fontclod/fontclod#readme",
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^4.0.1",
+    "sinon": "^4.1.3",
+    "sinon-chai": "^2.14.0"
+  }
+}

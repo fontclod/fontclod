@@ -1,9 +1,7 @@
-(function(Fontclod) {
-	"use strict";
+import format from '../format';
 
-	function Clod(c) {
-		c = c || {};
-
+export class Clod {
+	constructor(c = {}) {
 		this.glyph = {
 			named: {},
 			unicode: {}
@@ -43,20 +41,18 @@
 		};
 	}
 
-	Clod.format = {};
-
-	Clod.prototype.serialize = function(format) {
-		if (typeof Clod.format[format] == 'undefined')
+	serialize(format='clodifle') {
+		if (typeof format[format] == 'undefined')
 			format = 'clodifle';
 
-		return Clod.format[format].serialize(this.data);
-	};
+		return format[format].serialize(this.data);
+	}
 
-	Clod.prototype.unserialize = function(data, format) {
-		if (typeof Clod.format[format] == 'undefined')
+	unserialize(data, format) {
+		if (typeof format[format] == 'undefined')
 			format = 'clodifle';
 
-		var data   = Clod.format[format].unserialize(data),
+		var data   = format[format].unserialize(data),
 		    glyphs = data.font.glyphs;
 
 		this.glyph = {
@@ -66,9 +62,9 @@
 
 		this.data.font = data.font;
 		this.data.font.glyphs = this.glyph.named;
-	};
+	}
 
-	Clod.prototype.findGlyph = function(search) {
+	findGlyph(search) {
 		if (search[0] == '#') {
 			search = search.substr(1);
 
@@ -82,16 +78,14 @@
 		return undefined;
 	};
 
-	Clod.prototype.createGlyph = function() {
+	createGlyph() {
 	};
 
-	Clod.prototype.removeGlyph = function() {
+	removeGlyph() {
 	};
 
 	// to aid in copy()
-	Clod.prototype.valueOf = function() {
+	valueOf() {
 		return new this.constructor(this);
 	};
-
-	Fontclod.Clod = Clod;
-})(Fontclod);
+}
